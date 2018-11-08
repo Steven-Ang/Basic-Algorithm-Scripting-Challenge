@@ -1,10 +1,15 @@
+// Solution 1
 function reverseString(str) {
   return str.split("").reverse().join("");
 }
 
-// Test Cases
-console.log("\nTest Case 1: \nInput: 'hello' \nExpected Output: 'olleh'");
-console.log("Output: " + reverseString("hello") + "\n");
+// Solution 2
+function reverseString(str) {
+  let result = '';
+  for (let char of str) {
+    result = char + result;
+  }
+  return result;
+}
 
-console.log("Test Case 2: \nInput: 'SpikeGreen' \nExpected Output: 'neerGekipS'");
-console.log("Output: " + reverseString("SpikeGreen"));
+reverseString("hello");
