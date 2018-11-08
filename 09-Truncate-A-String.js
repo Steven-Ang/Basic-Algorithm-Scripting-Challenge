@@ -1,10 +1,8 @@
 function truncateString(str, num) {
-
-  if (str.length > num) {
-    (num <= 3) ? str = str.slice(0, num) + "..." : str = str.slice(0, num - 3) + "...";
-  }
-
-  return str;
+  // If the given length is equal or greater than the length of the given string. Just return the given string.
+  if (num >= str.length) return str;
+  // Truncate the string then return it
+  return str.slice(0, num) + "...";
 }
 
-truncateString("A-tisket a-tasket A green and yellow basket", 11);
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
