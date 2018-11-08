@@ -1,14 +1,14 @@
 function mutation(arr) {
-  var word = arr[0].toLowerCase();
-  var letters = arr[1].toLowerCase();
+  let first = arr[0].toLowerCase();
+	let second = arr[1].toLowerCase();
 
-  for (var i = 0; i < letters.length; i++) {
-    if (word.indexOf(letters[i]) === -1) {
-      return false;
-    }
-  }
+	for (let i = 0; i < second.length; i++) {
+		// If there is a character that is not in the first item, then break out and return false
+		if (first.indexOf(second[i]) === -1) return false;
+	}
 
-  return true;
+	// If everything is fine, then return true
+	return true;
 }
 
-mutation(["hello", "hey"]);
+mutation(["Alien", "line"])
