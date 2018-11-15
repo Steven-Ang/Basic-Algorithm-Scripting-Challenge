@@ -1,10 +1,10 @@
 // Solution 1
 function factorialize(num) {
-    var count = 1;
+    let sum = 1;
     for (var i = 1; i <= num ; i++) {
-        count *= i;
+        sum *= i;
     }
-    return count;
+    return sum;
 }
 
 // Solution 2
