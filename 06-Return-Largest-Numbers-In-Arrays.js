@@ -1,8 +1,16 @@
+// Elegant
 function largestOfFour(arr) {
   return arr.map(function(item) {
     return item.reduce(function(prev, current){
       return (current > prev) ? current : prev;
     });
+  });
+}
+
+// Not so elegant
+function largestOfFour(arr) {
+  return arr.map(item => {
+    return item.reduce( (prev, current) => (current > prev) ? current : prev );
   });
 }
 
