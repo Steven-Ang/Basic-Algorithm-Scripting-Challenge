@@ -12,4 +12,11 @@ function destroyer(arr) {
   return results;
 }
 
+// Solution #2
+function destroyer(arr) {
+  const list = arr;
+  const excludes = Array.from(arguments).slice(1);
+  return list.filter(item => (!excludes.includes(item)));
+}
+
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
